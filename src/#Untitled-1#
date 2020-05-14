@@ -1,0 +1,38 @@
+0x1
+0x2
+0x4
+0x8
+0x10
+0x20
+0x40
+0x80
+
+31 values (0x40 is middle? what are edges?)
+
+left/right=
+packet[6]
+2 (full left)
+4
+6
+8
+A
+
+front / back
+(full front)
+7E on packet[5]
+
+yaw 
+(+1 to the right)
+42 on packet[4]
+3E (+1 to the left)
+
+Throttle trim OFFSETS THROTTLE BY 1 FOR EACH FWD TICK
+
+
+range is 0-255 for sticks. 0x40 = 64
+
+so range is (SHR>>1) 0-32
+
+To apply this to trim maybe keep 2-126 range (0-128) 
+
+127+(trim)-0x40  
